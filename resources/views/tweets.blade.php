@@ -9,13 +9,13 @@
     <div class="form-group">
       
         <label class="col-sm-3 control-label">なりきる相手</label><br>
-        <input type="radio" name="fake_user" id="user_1" value="赤さん">
-        <label for="user_1"><img src="images/01 (1).png" style="width:100px"></img></label>
-        <input type="radio" name="fake_user" id="user_2" value="あやや">
+        <input type="radio" name="fake_user" id="user_1" value="1">
+        <label for="user_1"><img src="images/01.png" style="width:100px"></img></label>
+        <input type="radio" name="fake_user" id="user_2" value="2">
         <label for="user_2"><img src="images/02.png" style="width:100px"></img></label>
-        <input type="radio" name="fake_user" id="user_3" value="しょう">
+        <input type="radio" name="fake_user" id="user_3" value="3">
         <label for="user_3"><img src="images/03.png" style="width:100px"></img></label>
-        <input type="radio" name="fake_user" id="user_4" value="ダレ">
+        <input type="radio" name="fake_user" id="user_4" value="4">
         <label for="user_4"><img src="images/04.png" style="width:100px"></img></label>
         <input type="radio" name="fake_user" id="user_5" value="コナ">
         <label for="user_5"><img src="images/05.png" style="width:100px"></img></label>
@@ -93,7 +93,9 @@
         <div class="card-header align-items-center d-flex justify-content-between">
           <!--<a class="black-color no-text-decoration" title="" href="/users/">-->
           <div class="user">
-            <div class="fake_user">{{ $tweet->fake_user }}</div>
+            <div class="fake_user">
+              <img src="images/{{ $tweet->profile_photo }}"></img>
+              </div>
             <div class="real_user"></div>
           </div>
           <!--</a>-->

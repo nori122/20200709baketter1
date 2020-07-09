@@ -44,3 +44,11 @@ Route::get('test', function () {
 Route::get('tweets_2', function () {
     return view('tweets_2');
 });
+
+
+// Route::get('tweets',function(){
+//     //eloquent
+//     $tweets = Tweet::from( 'tweets as tweet' )
+//             ->join('tweets','tweets.real_user','=','users.id')
+//             ->get();
+// });

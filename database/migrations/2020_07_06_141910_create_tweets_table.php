@@ -15,8 +15,8 @@ class CreateTweetsTable extends Migration
     {
         Schema::create('tweets', function (Blueprint $table) {
             $table->id();
-            $table->string('real_user');
-            $table->string('fake_user')->nullable();
+            $table->integer('real_user');
+            $table->integer('fake_user')->nullable();
             $table->string('tweet');
             $table->string('image')->nullable();
             $table->timestamps();

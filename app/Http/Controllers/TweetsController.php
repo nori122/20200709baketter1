@@ -20,8 +20,10 @@ class TweetsController extends Controller
     public function index()
     {
         // return view('tweets');
-          $tweets = Tweet::orderBy('created_at', 'desc')->get();
-        //   ddd($tweets);
+          $tweets = Tweet::orderBy('tweets.created_at', 'desc')
+          ->join('users as U','tweets.real_user','=','U.id')
+          ->get();
+          // ddd($tweets);
           return view('tweets', [
             'tweets' => $tweets
   ]);
@@ -58,7 +60,7 @@ class TweetsController extends Controller
       }
       // Eloquentモデル
       $tweet = new Tweet;
-      $tweet->real_user = Auth::user()->name;
+      $tweet->real_user = Auth::user()->id;
       $tweet->fake_user = $request->fake_user;
       $tweet->tweet = $request->tweet;
       // $file_name = $file->$request->id;
