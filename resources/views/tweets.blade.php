@@ -7,22 +7,7 @@
   <form action="{{ route('tweets.store') }}" method="POST" class="form-horizontal" enctype="multipart/form-data">
     @csrf
     <div class="form-group">
-      <!-- タスク名 -->
-      <div class="col-sm-6">
-        <label for="tweet" class="col-sm-3 control-label">ツイート内容</label>
-        <input type="textarea" name="tweet" id="tweet" class="form-control">
-      </div>
-      <!-- ファイルupload -->
-      <div class="col-sm-6">
-        <label for="file" class="col-sm-3 control-label">添付画像</label>
-        <input type="file" id="file" name="file" class="form-control">
-      </div>
-      <!-- fake_user_テキストでインプットする場合 -->
-      <!--<div>-->
-      <!--  <input type="integer" id="fake_user" name="fake_user" class="form-control">-->
-      <!--</div>-->
-    <!-- fake_user_ラジオボタンでインプットする場合 -->
-     
+      
         <label class="col-sm-3 control-label">なりきる相手</label><br>
         <input type="radio" name="fake_user" id="user_1" value="赤さん">
         <label for="user_1"><img src="images/01 (1).png" style="width:100px"></img></label>
@@ -59,6 +44,22 @@
         <label for="user_16"><img src="images/16.png" style="width:100px"></img></label>
         
    
+      <!-- タスク名 -->
+      <div class="col-sm-6">
+        <label for="tweet" class="col-sm-3 control-label">ツイート内容</label>
+        <input type="textarea" name="tweet" id="tweet" class="form-control">
+      </div>
+      <!-- ファイルupload -->
+      <div class="col-sm-6">
+        <label for="file" class="col-sm-3 control-label">添付画像</label>
+        <input type="file" id="file" name="file" class="form-control">
+      </div>
+      <!-- fake_user_テキストでインプットする場合 -->
+      <!--<div>-->
+      <!--  <input type="integer" id="fake_user" name="fake_user" class="form-control">-->
+      <!--</div>-->
+    <!-- fake_user_ラジオボタンでインプットする場合 -->
+     
   
       
     </div>
